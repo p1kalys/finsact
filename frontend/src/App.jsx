@@ -1,8 +1,13 @@
-import 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Signup } from "./pages/SignUp";
+import { Signin } from "./pages/SignIn";
+import { Dashboard } from "./pages/Dashboard";
+import { SendMoney } from "./pages/SendMoney";
+
 function App() {
   return (
     <>
-       <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
@@ -11,6 +16,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-  )
+  );
 }
-export default App
+
+export default App;

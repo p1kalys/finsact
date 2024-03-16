@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
-
-mongoose.connect(process.env.MONGO_URL);
-
+try {
+    mongoose.connect(process.env.MONGO_URL);
+    console.log("Databse is connected!");
+} catch (error) {
+    console.log(error);
+}
 
 const UserSchema = new mongoose.Schema({
     username: {
